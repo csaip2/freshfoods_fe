@@ -3,7 +3,7 @@ import { SiCodefresh } from "react-icons/si";
 import { MdMenu } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
 import { PiShoppingCartThin } from "react-icons/pi";
-import ResponsiveMenu from "./helper/ResponsiveMenu";
+import ResponsiveMenu from "../helper/ResponsiveMenu";
 
 const Navbar = () => {
   const headerData = [
