@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Banner1 from "../../gallery/Banner1.png";
 import Banner2 from "../../gallery/Banner2.png";
 import Banner3 from "../../gallery/Banner3.png";
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [Banner1, Banner2, Banner3];
+  const images = [Banner2, Banner3];
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -19,14 +18,14 @@ const Slider = () => {
   };
 
   return (
-    <div className="relative overflow-hidden w-full max-w-screen-xl mx-auto rounded-lg">
+    <div className="relative overflow-hidden mx-auto rounded-lg">
       <AnimatePresence>
         <motion.div
           key={currentIndex}
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="w-full h-[150px] sm:h-[200px] md:h-[200px] lg:h-[400px] rounded-lg overflow-hidden"
+          className="w-full h-[150px] sm:h-[200px] md:h-[400px] lg:h-[600px] rounded-lg overflow-hidden"
         >
           <img
             src={images[currentIndex]}
