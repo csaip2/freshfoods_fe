@@ -17,6 +17,15 @@ const HomePage = () => {
     <div className="bg-[#FFF0F5]">
       <Slider />
 
+      {/* <motion.img
+        src={EggImage2}
+        alt="decorative egg 2"
+        className="absolute lg:left-20 lg:w-46 sm:w-20 sm:right-4 xs:w-10 md:w-36 opacity-10"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 0.4, scale: 1 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+      /> */}
+
       {/* Hero Section */}
       <div className="relative w-full mx-auto px-4 sm:px-6 lg:px-8 py-4">
         {/* Hero Content */}
