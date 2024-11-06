@@ -4,6 +4,7 @@ import { MdMenu } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
 import { PiShoppingCartThin } from "react-icons/pi";
 import ResponsiveMenu from "../helper/ResponsiveMenu";
+import LoginForm from "../Forms/LoginForm";
 
 const Navbar = () => {
   const headerData = [
@@ -14,6 +15,7 @@ const Navbar = () => {
   ];
 
   const [open, setOpen] = useState(false);
+  const [formOpen, setFormOpen] = useState(false);
 
   return (
     <>
@@ -52,9 +54,13 @@ const Navbar = () => {
             <button className="text-2xl hover:bg-primary hover:text-white rounded-full p-2 duration-200">
               <PiShoppingCartThin className="text-2xl" />
             </button>
-            <button className="hover:bg-primary text-dark font-semibold hover:text-white rounded-md border-2 px-6 py-2 duration-200 hidden md:block">
+            <button
+              className="hover:bg-primary text-dark font-semibold hover:text-white rounded-md border-2 px-6 py-2 duration-200 hidden md:block"
+              onClick={() => setFormOpen(true)}
+            >
               Login
             </button>
+            <LoginForm formOpen={formOpen} onClose={() => setFormOpen(false)} />
           </div>
 
           {/*Mobile Hamburger Section*/}

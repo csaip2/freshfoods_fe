@@ -13,6 +13,12 @@ const HomePage = () => {
     transition: { duration: 0.8, ease: "easeOut" },
   };
 
+  const scaleIn = {
+    initial: { scale: 0.9, opacity: 0 },
+    animate: { scale: 1, opacity: 1 },
+    transition: { duration: 0.2, delay: 0.1, ease: "easeOut" },
+  };
+
   return (
     <div className="bg-[#FFF0F5]">
       <Slider />
@@ -62,6 +68,44 @@ const HomePage = () => {
             alt="home page banner"
             className="w-full h-full object-cover"
           />
+
+          {/* Text Overlay */}
+          <div className="absolute inset-0">
+            <div className="h-full w-full md:w-1/2 flex flex-col justify-center p-6 sm:p-8 md:p-12 lg:p-16">
+              <motion.p
+                {...fadeInUp}
+                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-green-800 mb-4
+                  font-['Montserrat'] font-semibold max-w-[90%] sm:max-w-[80%] md:max-w-full"
+              >
+                Fresh Chicken and Eggs
+              </motion.p>
+
+              <motion.p
+                {...scaleIn}
+                className="text-sm sm:text-base sm:text-justify md:text-lg lg:text-xl text-gray-700 mb-8
+                  font-['Roboto'] leading-relaxed max-w-[60%] sm:max-w-[50%] md:max-w-xl
+                  tracking-wide"
+              >
+                Welcome to our non-veg store! Explore our wide selection of
+                high-quality fresh chicken and eggs, perfect for all your
+                culinary needs
+              </motion.p>
+
+              <motion.button
+                {...scaleIn}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-green-600 hover:bg-green-700 text-white
+                  px-6 sm:px-8 py-2.5 sm:py-3 rounded-full
+                  text-sm sm:text-base md:text-lg
+                  font-['Montserrat'] font-semibold
+                  transition-colors duration-300
+                  shadow-lg w-fit"
+              >
+                Shop now
+              </motion.button>
+            </div>
+          </div>
         </div>
       </div>
 
