@@ -5,6 +5,7 @@ import { CiSearch } from "react-icons/ci";
 import { PiShoppingCartThin } from "react-icons/pi";
 import ResponsiveMenu from "../helper/ResponsiveMenu";
 import LoginForm from "../Forms/LoginForm";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const headerData = [
@@ -38,12 +39,12 @@ const Navbar = () => {
             <ul className="flex gap-6 text-gray-600">
               {headerData.map((item) => (
                 <li key={item.id}>
-                  <a
-                    href={item.link}
+                  <Link
+                    to={item.link}
                     className="inline-block py-1 px-4 text-base lg:text-lg hover:text-primary font-semibold"
                   >
                     {item.title}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -68,7 +69,13 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Sidebar Section */}
-        {open && <ResponsiveMenu open={open} headerData={headerData} />}
+        {open && (
+          <ResponsiveMenu
+            open={open}
+            headerData={headerData}
+            onClose={() => setOpen(false)}
+          />
+        )}
       </nav>
     </>
   );
