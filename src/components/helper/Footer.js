@@ -1,14 +1,13 @@
-import React from "react";
 import { motion } from "framer-motion";
+import React from "react";
 import {
-  FaXTwitter,
+  FaFacebook,
   FaInstagram,
   FaLinkedin,
-  FaFacebook,
-  FaYoutube,
   FaWhatsapp,
+  FaXTwitter,
+  FaYoutube,
 } from "react-icons/fa6";
-import { FaHeart } from "react-icons/fa";
 
 const Footer = () => {
   const containerVariants = {

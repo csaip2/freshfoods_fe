@@ -1,7 +1,7 @@
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import SignUpForm from "./SignUpForm";
-import { motion } from "framer-motion";
 
 const LoginForm = ({ formOpen, onClose }) => {
   const [signUpFormOpen, setSignUpFormOpen] = useState(false);
@@ -68,7 +68,7 @@ const LoginForm = ({ formOpen, onClose }) => {
                 required
               />
               <a
-                href="#"
+                href="/forgot"
                 className="text-blue-800 hover:text-blue-800/80 text-md flex justify-end"
               >
                 Forgot your password?
