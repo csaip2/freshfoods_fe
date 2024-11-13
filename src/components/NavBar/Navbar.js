@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { SiCodefresh } from "react-icons/si";
 import { MdMenu } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
-import { PiShoppingCartThin } from "react-icons/pi";
 import ResponsiveMenu from "../helper/ResponsiveMenu";
+
 import LoginForm from "../Forms/LoginForm";
+import { Cart } from "../cart/Cart";
 
 const Navbar = () => {
   const headerData = [
@@ -52,7 +53,7 @@ const Navbar = () => {
               <CiSearch className="text-2xl" />
             </button>
             <button className="text-2xl hover:bg-primary hover:text-white rounded-full p-2 duration-200">
-              <PiShoppingCartThin className="text-2xl" />
+            <Cart />
             </button>
             <button
               className="hover:bg-primary text-dark font-semibold hover:text-white rounded-md border-2 px-6 py-2 duration-200 hidden md:block"
